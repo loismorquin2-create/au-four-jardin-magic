@@ -1,8 +1,14 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import heroPizza from "@/assets/hero-pizza.jpg";
 import oven from "@/assets/oven.jpg";
 import ingredients from "@/assets/ingredients.jpg";
 import terrace from "@/assets/terrace.jpg";
+import galMargherita from "@/assets/gallery/pizza-margherita.jpg";
+import galParma from "@/assets/gallery/pizza-parma.jpg";
+import galFour from "@/assets/gallery/four-flammes.jpg";
+import galTerrasse from "@/assets/gallery/terrasse-soir.jpg";
+import galEvenement from "@/assets/gallery/evenement-anniversaire.jpg";
+import galCabane from "@/assets/gallery/terrasse-cabane.jpg.asset.json";
 import { Phone, MapPin, Clock, Flame, Leaf, ShoppingBag } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -32,6 +38,7 @@ function Index() {
             <a href="#histoire" className="hover:text-foreground transition">L'histoire</a>
             <a href="#carte" className="hover:text-foreground transition">La carte</a>
             <a href="#terrasse" className="hover:text-foreground transition">La terrasse</a>
+            <Link to="/galerie" className="hover:text-foreground transition">Galerie</Link>
             <a href="#contact" className="hover:text-foreground transition">Contact</a>
           </nav>
           <a
