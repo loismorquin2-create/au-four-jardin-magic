@@ -1,8 +1,14 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import heroPizza from "@/assets/hero-pizza.jpg";
 import oven from "@/assets/oven.jpg";
 import ingredients from "@/assets/ingredients.jpg";
 import terrace from "@/assets/terrace.jpg";
+import galMargherita from "@/assets/gallery/pizza-margherita.jpg";
+import galParma from "@/assets/gallery/pizza-parma.jpg";
+import galFour from "@/assets/gallery/four-flammes.jpg";
+import galTerrasse from "@/assets/gallery/terrasse-soir.jpg";
+import galEvenement from "@/assets/gallery/evenement-anniversaire.jpg";
+import galCabane from "@/assets/gallery/terrasse-cabane.jpg.asset.json";
 import { Phone, MapPin, Clock, Flame, Leaf, ShoppingBag } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -32,6 +38,7 @@ function Index() {
             <a href="#histoire" className="hover:text-foreground transition">L'histoire</a>
             <a href="#carte" className="hover:text-foreground transition">La carte</a>
             <a href="#terrasse" className="hover:text-foreground transition">La terrasse</a>
+            <Link to="/galerie" className="hover:text-foreground transition">Galerie</Link>
             <a href="#contact" className="hover:text-foreground transition">Contact</a>
           </nav>
           <a
@@ -189,6 +196,49 @@ function Index() {
           </div>
           <div className="order-1 md:order-2 relative">
             <img src={terrace} alt="Terrasse couverte de la pizzeria" className="rounded-sm shadow-[var(--shadow-warm)] w-full" loading="lazy" width={1400} height={1000} />
+          </div>
+        </div>
+      </section>
+
+      {/* GALERIE PREVIEW */}
+      <section id="galerie" className="py-32 bg-card/40 border-t border-border/40">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex items-end justify-between flex-wrap gap-6 mb-12">
+            <div>
+              <p className="text-xs uppercase tracking-[0.3em] text-accent mb-4">En images</p>
+              <h2 className="text-4xl md:text-5xl font-bold">La galerie</h2>
+            </div>
+            <Link to="/galerie" className="text-sm text-primary hover:text-primary-glow font-medium underline-offset-4 hover:underline">
+              Voir toute la galerie →
+            </Link>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[160px] md:auto-rows-[200px] gap-3 md:gap-4">
+            {[
+              { src: galMargherita, alt: "Pizza Margherita", span: "" },
+              { src: galTerrasse, alt: "Terrasse au coucher du soleil", span: "col-span-2" },
+              { src: galFour, alt: "Four à bois en flambée", span: "row-span-2" },
+              { src: galParma, alt: "Pizza Parma", span: "" },
+              { src: galCabane.url, alt: "Cabane et terrasse", span: "col-span-2" },
+              { src: galEvenement, alt: "Soirée entre amis", span: "" },
+            ].map((p, i) => (
+              <Link
+                key={p.src}
+                to="/galerie"
+                className={`group relative overflow-hidden rounded-sm bg-background/40 ${p.span}`}
+                style={{ animation: `float-up 0.6s ease-out ${i * 0.05}s both` }}
+              >
+                <img
+                  src={p.src}
+                  alt={p.alt}
+                  loading="lazy"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <p className="absolute bottom-3 left-3 right-3 text-xs font-display opacity-0 group-hover:opacity-100 transition-opacity">
+                  {p.alt}
+                </p>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
