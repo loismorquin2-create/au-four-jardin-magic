@@ -3,12 +3,8 @@ import heroPizza from "@/assets/hero-pizza.jpg";
 import oven from "@/assets/oven.jpg";
 import ingredients from "@/assets/ingredients.jpg";
 import terrace from "@/assets/terrace.jpg";
-import galMargherita from "@/assets/gallery/pizza-margherita.jpg";
-import galParma from "@/assets/gallery/pizza-parma.jpg";
-import galFour from "@/assets/gallery/four-flammes.jpg";
-import galTerrasse from "@/assets/gallery/terrasse-soir.jpg";
-import galEvenement from "@/assets/gallery/evenement-anniversaire.jpg";
 import galCabane from "@/assets/gallery/terrasse-cabane.jpg.asset.json";
+import galSandwich from "@/assets/gallery/andlav-sandwich.jpg.asset.json";
 import { Phone, MapPin, Clock, Flame, Leaf, ShoppingBag } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -212,14 +208,10 @@ function Index() {
               Voir toute la galerie →
             </Link>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[160px] md:auto-rows-[200px] gap-3 md:gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 auto-rows-[220px] md:auto-rows-[280px] gap-3 md:gap-4">
             {[
-              { src: galMargherita, alt: "Pizza Margherita", span: "" },
-              { src: galTerrasse, alt: "Terrasse au coucher du soleil", span: "col-span-2" },
-              { src: galFour, alt: "Four à bois en flambée", span: "row-span-2" },
-              { src: galParma, alt: "Pizza Parma", span: "" },
-              { src: galCabane.url, alt: "Cabane et terrasse", span: "col-span-2" },
-              { src: galEvenement, alt: "Soirée entre amis", span: "" },
+              { src: galCabane.url, alt: "La cabane et la terrasse en été", span: "md:col-span-2" },
+              { src: galSandwich.url, alt: "Sandwichs l'Andlav au marché", span: "" },
             ].map((p, i) => (
               <Link
                 key={p.src}
@@ -234,7 +226,7 @@ function Index() {
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                <p className="absolute bottom-3 left-3 right-3 text-xs font-display opacity-0 group-hover:opacity-100 transition-opacity">
+                <p className="absolute bottom-3 left-3 right-3 text-sm font-display opacity-0 group-hover:opacity-100 transition-opacity">
                   {p.alt}
                 </p>
               </Link>
