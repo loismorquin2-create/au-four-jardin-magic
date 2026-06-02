@@ -3,12 +3,8 @@ import heroPizza from "@/assets/hero-pizza.jpg";
 import oven from "@/assets/oven.jpg";
 import ingredients from "@/assets/ingredients.jpg";
 import terrace from "@/assets/terrace.jpg";
-import galMargherita from "@/assets/gallery/pizza-margherita.jpg";
-import galParma from "@/assets/gallery/pizza-parma.jpg";
-import galFour from "@/assets/gallery/four-flammes.jpg";
-import galTerrasse from "@/assets/gallery/terrasse-soir.jpg";
-import galEvenement from "@/assets/gallery/evenement-anniversaire.jpg";
 import galCabane from "@/assets/gallery/terrasse-cabane.jpg.asset.json";
+import galSandwich from "@/assets/gallery/andlav-sandwich.jpg.asset.json";
 import { Phone, MapPin, Clock, Flame, Leaf, ShoppingBag } from "lucide-react";
 
 export const Route = createFileRoute("/")({
