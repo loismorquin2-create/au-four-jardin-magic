@@ -32,7 +32,7 @@ function Index() {
           </a>
           <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             <a href="#histoire" className="hover:text-foreground transition">L'histoire</a>
-            <a href="#carte" className="hover:text-foreground transition">La carte</a>
+            <Link to="/carte" className="hover:text-foreground transition">La carte</Link>
             <a href="#terrasse" className="hover:text-foreground transition">La terrasse</a>
             <Link to="/galerie" className="hover:text-foreground transition">Galerie</Link>
             <a href="#contact" className="hover:text-foreground transition">Contact</a>
@@ -72,9 +72,9 @@ function Index() {
               <a href="tel:0667485852" className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-6 py-3 font-medium shadow-[var(--shadow-warm)] hover:bg-primary-glow transition">
                 <Phone className="w-4 h-4" /> 06 67 48 58 52
               </a>
-              <a href="#carte" className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 font-medium hover:bg-card transition">
+              <Link to="/carte" className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 font-medium hover:bg-card transition">
                 <ShoppingBag className="w-4 h-4" /> Découvrir la carte
-              </a>
+              </Link>
             </div>
             <div className="mt-10 flex items-center gap-6 text-sm text-muted-foreground">
               <div>
@@ -171,9 +171,12 @@ function Index() {
               </article>
             ))}
           </div>
-          <p className="text-center text-sm text-muted-foreground mt-12 italic">
-            Carte non exhaustive — suggestions du moment selon arrivage. Appelez-nous pour les nouveautés. ✨
-          </p>
+          <div className="text-center mt-12">
+            <Link to="/carte" className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-6 py-3 font-medium hover:bg-primary-glow transition">
+              Voir la carte complète →
+            </Link>
+            <p className="text-sm text-muted-foreground mt-4 italic">Toutes nos pizzas sauce tomate & sauce crème</p>
+          </div>
         </div>
       </section>
 
