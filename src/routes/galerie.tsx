@@ -1,20 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState, useEffect, useCallback } from "react";
-import { Phone, ArrowLeft, X, ChevronLeft, ChevronRight } from "lucide-react";
+import { Phone, ArrowLeft, X, ChevronLeft, ChevronRight, Camera } from "lucide-react";
 
-import margherita from "@/assets/gallery/pizza-margherita.jpg";
-import parma from "@/assets/gallery/pizza-parma.jpg";
-import tarte from "@/assets/gallery/tarte-flambee.jpg";
-import four from "@/assets/gallery/four-flammes.jpg";
-import pate from "@/assets/gallery/pate-mains.jpg";
-import ingredients from "@/assets/gallery/ingredients-flat.jpg";
-import terrasseSoir from "@/assets/gallery/terrasse-soir.jpg";
-import vinChaud from "@/assets/gallery/vin-chaud.jpg";
-import evenement from "@/assets/gallery/evenement-anniversaire.jpg";
 import terrasseCabane from "@/assets/gallery/terrasse-cabane.jpg.asset.json";
 import sandwich from "@/assets/gallery/andlav-sandwich.jpg.asset.json";
 
-type Category = "Tous" | "Pizzas" | "Terrasse" | "Événements" | "Coulisses";
+type Category = "Tous" | "Terrasse" | "Événements";
 
 type Photo = {
   src: string;
@@ -26,29 +17,20 @@ type Photo = {
 };
 
 const photos: Photo[] = [
-  { src: margherita, alt: "Pizza Margherita au feu de bois", category: "Pizzas", span: "square", w: 1024, h: 1024 },
-  { src: parma, alt: "Pizza Parma jambon et roquette", category: "Pizzas", span: "tall", w: 1024, h: 1280 },
   { src: terrasseCabane.url, alt: "La cabane et la terrasse en été", category: "Terrasse", span: "wide", w: 1920, h: 1080 },
-  { src: four, alt: "Four à bois en pleine flambée", category: "Coulisses", span: "square", w: 1024, h: 1024 },
-  { src: tarte, alt: "Tarte flambée alsacienne", category: "Pizzas", span: "square", w: 1024, h: 1024 },
-  { src: terrasseSoir, alt: "Terrasse au coucher du soleil", category: "Terrasse", span: "wide", w: 1280, h: 1024 },
-  { src: pate, alt: "Façonnage de la pâte à la main", category: "Coulisses", span: "tall", w: 1024, h: 1280 },
-  { src: evenement, alt: "Soirée entre amis sur la terrasse", category: "Événements", span: "wide", w: 1280, h: 1024 },
-  { src: ingredients, alt: "Produits frais et locaux", category: "Coulisses", span: "wide", w: 1280, h: 1024 },
   { src: sandwich.url, alt: "Sandwichs l'Andlav au marché", category: "Événements", span: "tall", w: 1024, h: 1820 },
-  { src: vinChaud, alt: "Vin blanc chaud bio maison", category: "Terrasse", span: "tall", w: 1024, h: 1280 },
 ];
 
-const categories: Category[] = ["Tous", "Pizzas", "Terrasse", "Événements", "Coulisses"];
+const categories: Category[] = ["Tous", "Terrasse", "Événements"];
 
 export const Route = createFileRoute("/galerie")({
   head: () => ({
     meta: [
       { title: "Galerie photos — Au four & au jardin, Andlau" },
-      { name: "description", content: "Découvrez en images nos pizzas au feu de bois, notre terrasse bucolique et nos événements à Andlau, en Alsace." },
+      { name: "description", content: "Découvrez en images notre terrasse bucolique et nos sandwichs l'Andlav à Andlau, en Alsace." },
       { property: "og:title", content: "Galerie — Au four & au jardin" },
-      { property: "og:description", content: "Pizzas, terrasse, coulisses et événements de notre pizzeria artisanale à Andlau." },
-      { property: "og:image", content: margherita },
+      { property: "og:description", content: "Terrasse, sandwichs et événements de notre pizzeria artisanale à Andlau." },
+      { property: "og:image", content: terrasseCabane.url },
     ],
   }),
   component: Galerie,
@@ -114,7 +96,7 @@ function Galerie() {
           <p className="text-xs uppercase tracking-[0.3em] text-accent mb-4">En images</p>
           <h1 className="text-4xl md:text-6xl font-bold mb-4">La galerie</h1>
           <p className="text-muted-foreground max-w-xl mx-auto leading-relaxed">
-            Du feu de bois à la terrasse, en passant par les soirées entre amis — un aperçu de la vie chez nous.
+            Un aperçu de notre univers — la galerie s'étoffera au fil des saisons.
           </p>
         </div>
       </section>
@@ -174,6 +156,15 @@ function Galerie() {
         {visible.length === 0 && (
           <p className="text-center text-muted-foreground py-20">Aucune photo dans cette catégorie pour l'instant.</p>
         )}
+
+        {/* Invitation à envoyer des photos */}
+        <div className="max-w-2xl mx-auto mt-20 p-8 border border-dashed border-border/60 rounded-sm text-center bg-card/30">
+          <Camera className="w-6 h-6 text-primary mx-auto mb-4" />
+          <h2 className="font-display text-2xl mb-2">D'autres photos arrivent bientôt</h2>
+          <p className="text-muted-foreground text-sm leading-relaxed">
+            Nous enrichissons la galerie avec de vraies photos de nos pizzas, de la terrasse et de nos événements.
+          </p>
+        </div>
       </section>
 
       {/* FOOTER */}
@@ -204,20 +195,24 @@ function Galerie() {
           >
             <X className="w-5 h-5" />
           </button>
-          <button
-            className="absolute left-4 md:left-8 p-3 rounded-full bg-card/60 hover:bg-card text-foreground transition"
-            onClick={(e) => { e.stopPropagation(); prev(); }}
-            aria-label="Précédente"
-          >
-            <ChevronLeft className="w-6 h-6" />
-          </button>
-          <button
-            className="absolute right-4 md:right-8 p-3 rounded-full bg-card/60 hover:bg-card text-foreground transition"
-            onClick={(e) => { e.stopPropagation(); next(); }}
-            aria-label="Suivante"
-          >
-            <ChevronRight className="w-6 h-6" />
-          </button>
+          {visible.length > 1 && (
+            <>
+              <button
+                className="absolute left-4 md:left-8 p-3 rounded-full bg-card/60 hover:bg-card text-foreground transition"
+                onClick={(e) => { e.stopPropagation(); prev(); }}
+                aria-label="Précédente"
+              >
+                <ChevronLeft className="w-6 h-6" />
+              </button>
+              <button
+                className="absolute right-4 md:right-8 p-3 rounded-full bg-card/60 hover:bg-card text-foreground transition"
+                onClick={(e) => { e.stopPropagation(); next(); }}
+                aria-label="Suivante"
+              >
+                <ChevronRight className="w-6 h-6" />
+              </button>
+            </>
+          )}
           <figure className="max-w-5xl max-h-full flex flex-col items-center gap-4" onClick={(e) => e.stopPropagation()}>
             <img
               src={visible[lightbox].src}
