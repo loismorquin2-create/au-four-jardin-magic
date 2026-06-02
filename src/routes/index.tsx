@@ -32,7 +32,7 @@ function Index() {
           </a>
           <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             <a href="#histoire" className="hover:text-foreground transition">L'histoire</a>
-            <a href="#carte" className="hover:text-foreground transition">La carte</a>
+            <Link to="/carte" className="hover:text-foreground transition">La carte</Link>
             <a href="#terrasse" className="hover:text-foreground transition">La terrasse</a>
             <Link to="/galerie" className="hover:text-foreground transition">Galerie</Link>
             <a href="#contact" className="hover:text-foreground transition">Contact</a>
