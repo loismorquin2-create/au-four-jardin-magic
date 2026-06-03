@@ -8,7 +8,7 @@ import pizzaiolo from "@/assets/gallery/pizzaiolo-comptoir.jpg.asset.json";
 import pizzaChevre from "@/assets/gallery/pizza-chevre-planche.jpg.asset.json";
 import pizzaOeuf from "@/assets/gallery/pizza-oeuf-piment.jpg.asset.json";
 import cabaneJour from "@/assets/gallery/cabane-jour.webp.asset.json";
-import fourNuit from "@/assets/gallery/four-nuit.jpg.asset.json";
+import pizzaPoivrons from "@/assets/gallery/pizza-poivrons.webp.asset.json";
 
 type Category = "Tous" | "Terrasse" | "Événements" | "Pizzas" | "Ambiance";
 
@@ -27,7 +27,7 @@ const photos: Photo[] = [
   { src: pizzaChevre.url, alt: "Pizza chèvre-miel sur planche en bois", category: "Pizzas", w: 141, h: 142 },
   { src: pizzaOeuf.url, alt: "Pizza œuf fermier et piment", category: "Pizzas", span: "tall", w: 141, h: 236 },
   { src: pizzaiolo.url, alt: "Le pizzaiolo derrière le comptoir", category: "Ambiance", w: 141, h: 142 },
-  { src: fourNuit.url, alt: "Le four à bois la nuit", category: "Ambiance", span: "tall", w: 141, h: 236 },
+  { src: pizzaPoivrons.url, alt: "Pizza artisanale aux poivrons frais", category: "Pizzas", span: "wide", w: 680, h: 510 },
   { src: sandwich.url, alt: "Sandwichs l'Andlav au marché", category: "Événements", span: "tall", w: 1024, h: 1820 },
 ];
 
