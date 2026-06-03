@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroPizza from "@/assets/hero-pizza.jpg";
-import oven from "@/assets/oven.jpg";
+import oven from "@/assets/oven-new.webp";
 import ingredients from "@/assets/ingredients.jpg";
-import terrace from "@/assets/terrace.jpg";
+import terrace from "@/assets/terrace-new.webp";
 import galCabane from "@/assets/gallery/terrasse-cabane.jpg.asset.json";
 import galSandwich from "@/assets/gallery/andlav-sandwich.jpg.asset.json";
 import { Phone, MapPin, Clock, Flame, Leaf, ShoppingBag } from "lucide-react";
