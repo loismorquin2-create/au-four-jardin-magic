@@ -4,8 +4,13 @@ import { Phone, ArrowLeft, X, ChevronLeft, ChevronRight, Camera } from "lucide-r
 
 import terrasseCabane from "@/assets/gallery/terrasse-cabane.jpg.asset.json";
 import sandwich from "@/assets/gallery/andlav-sandwich.jpg.asset.json";
+import pizzaiolo from "@/assets/gallery/pizzaiolo-comptoir.jpg.asset.json";
+import pizzaChevre from "@/assets/gallery/pizza-chevre-planche.jpg.asset.json";
+import pizzaOeuf from "@/assets/gallery/pizza-oeuf-piment.jpg.asset.json";
+import cabaneJour from "@/assets/gallery/cabane-jour.webp.asset.json";
+import fourNuit from "@/assets/gallery/four-nuit.jpg.asset.json";
 
-type Category = "Tous" | "Terrasse" | "Événements";
+type Category = "Tous" | "Terrasse" | "Événements" | "Pizzas" | "Ambiance";
 
 type Photo = {
   src: string;
@@ -17,11 +22,17 @@ type Photo = {
 };
 
 const photos: Photo[] = [
+  { src: cabaneJour.url, alt: "La cabane et la terrasse au crépuscule", category: "Terrasse", span: "tall", w: 382, h: 510 },
   { src: terrasseCabane.url, alt: "La cabane et la terrasse en été", category: "Terrasse", span: "wide", w: 1920, h: 1080 },
+  { src: pizzaChevre.url, alt: "Pizza chèvre-miel sur planche en bois", category: "Pizzas", w: 141, h: 142 },
+  { src: pizzaOeuf.url, alt: "Pizza œuf fermier et piment", category: "Pizzas", span: "tall", w: 141, h: 236 },
+  { src: pizzaiolo.url, alt: "Le pizzaiolo derrière le comptoir", category: "Ambiance", w: 141, h: 142 },
+  { src: fourNuit.url, alt: "Le four à bois la nuit", category: "Ambiance", span: "tall", w: 141, h: 236 },
   { src: sandwich.url, alt: "Sandwichs l'Andlav au marché", category: "Événements", span: "tall", w: 1024, h: 1820 },
 ];
 
-const categories: Category[] = ["Tous", "Terrasse", "Événements"];
+const categories: Category[] = ["Tous", "Terrasse", "Pizzas", "Ambiance", "Événements"];
+
 
 export const Route = createFileRoute("/galerie")({
   head: () => ({
