@@ -130,7 +130,7 @@ function CartePage() {
       {/* LÉGENDE / NOTES */}
       <section className="max-w-4xl mx-auto px-6 pb-20">
         <div className="border border-border/60 bg-card/40 p-8 space-y-4 text-sm">
-          <p className="flex items-start gap-3"><Leaf className="w-4 h-4 text-secondary mt-0.5 shrink-0" /> <span><strong>Végétarien</strong> — sans viande, sans poisson.</span></p>
+          <p className="flex items-start gap-3"><Leaf className="w-4 h-4 text-secondary mt-0.5 shrink-0" /> <span><strong>Végétarien</strong> 13€\n sans viande, sans poisson.</span></p>
           <p><span className="text-primary font-bold">*</span> <strong>Persillade</strong> : huile d'olive extra vierge pressée à froid + ail + persil.</p>
           <p className="flex items-start gap-3"><Flame className="w-4 h-4 text-primary mt-0.5 shrink-0" /> <span><strong>Supplément offert au choix</strong> : huile olive extra vierge piquante avec aromates du jardin, baies de genévrier... et/ou olives noires.</span></p>
           <p><strong>Supplément œuf fermier</strong> : 1€</p>
@@ -151,7 +151,7 @@ function CartePage() {
           </a>
           <p className="text-sm text-muted-foreground mt-8">
             Ouvert les soirs de 18h à 21h15, du vendredi au lundi & lundi midi.<br />
-            5b rue de la Commanderie — Andlau
+            5b rue de la Commanderie 13€\n Andlau
           </p>
         </div>
       </section>
