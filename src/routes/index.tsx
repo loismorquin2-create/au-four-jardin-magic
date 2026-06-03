@@ -114,7 +114,7 @@ function Index() {
             <img src={oven} alt="Four à pizza traditionnel" className="rounded-sm shadow-[var(--shadow-warm)] w-full" loading="lazy" width={1200} height={1400} />
             <div className="absolute -bottom-6 -right-6 hidden md:block bg-primary text-primary-foreground p-6 max-w-[200px]">
               <p className="font-display italic text-sm leading-snug">"Super pizzas, super ingrédients, super pizzaïolo."</p>
-              <p className="text-xs mt-2 opacity-80">— Moulin Kircher</p>
+              <p className="text-xs mt-2 opacity-80">13€\n Moulin Kircher</p>
             </div>
           </div>
           <div>
@@ -156,15 +156,15 @@ function Index() {
             {[
               { name: "La Parma", price: "15€", desc: "Jambon de Parme 24 mois, roquette, parmesan. À part pour préserver la fraîcheur." , tag: "Signature" },
               { name: "La Burrata Verde", price: "14,50€", desc: "Base Margherita, burrata de bufflonne et roquette ajoutées après cuisson.", tag: "Retour" },
-              { name: "La Zucca+", price: "—", desc: "Base potimarron, mozzarella, amandes torréfiées et jambon de Parme 24 mois.", tag: "Saison" },
-              { name: "La Vivaldi", price: "—", desc: "L'incroyable 4 saisons, à l'artichaut mariné. Pour les amateurs de légumes.", tag: "Végétarienne" },
-              { name: "La Melanzana", price: "—", desc: "Aubergine grillée marinée, la très redemandée. Une caresse méditerranéenne.", tag: "Végétarienne" },
+              { name: "La Zucca+", price: "13€\n", desc: "Base potimarron, mozzarella, amandes torréfiées et jambon de Parme 24 mois.", tag: "Saison" },
+              { name: "La Vivaldi", price: "13€\n", desc: "L'incroyable 4 saisons, à l'artichaut mariné. Pour les amateurs de légumes.", tag: "Végétarienne" },
+              { name: "La Melanzana", price: "13€\n", desc: "Aubergine grillée marinée, la très redemandée. Une caresse méditerranéenne.", tag: "Végétarienne" },
               { name: "L'Alsacienne", price: "13€", desc: "Tarte flambée au fromage bio du Lindenhof, lard salé à sec, oignon, cumin.", tag: "Du coin" },
             ].map((p, i) => (
               <article key={p.name} className="group p-6 bg-background/60 backdrop-blur border border-border/60 hover:border-primary/50 transition-all hover:-translate-y-1 duration-300" style={{ animation: `float-up 0.6s ease-out ${i * 0.05}s both` }}>
                 <div className="flex items-start justify-between mb-3">
                   <h3 className="font-display text-2xl">{p.name}</h3>
-                  <span className="text-primary font-display text-xl">{p.price}</span>
+                  <span className="text-primary font-display bg-slate-50 text-slate-50 text-xl">{p.price}</span>
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4">{p.desc}</p>
                 <span className="inline-block text-[10px] uppercase tracking-[0.2em] text-accent border border-accent/30 px-2 py-1 rounded-full">{p.tag}</span>
@@ -272,7 +272,7 @@ function Index() {
             <span className="text-primary">Au four</span>
             <span> & </span>
             <span className="text-secondary">au jardin</span>
-            <span className="ml-3 opacity-60">— Pizzeria artisanale, Andlau</span>
+            <span className="ml-3 opacity-60">13€\n Pizzeria artisanale, Andlau</span>
           </div>
           <div className="opacity-70">© {new Date().getFullYear()} · Fait avec 🔥 & 🍅</div>
         </div>
