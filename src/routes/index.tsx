@@ -186,11 +186,11 @@ function Index() {
           <div className="order-2 md:order-1">
             <p className="text-xs uppercase tracking-[0.3em] text-accent mb-4">La terrasse</p>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Un cadre bucolique, été comme hiver.</h2>
-            <p className="text-muted-foreground leading-relaxed mb-6">
+            <p className="text-muted-foreground leading-relaxed mb-6 text-justify">
               Couverte, douillette, baignée de guirlandes lumineuses : notre terrasse vous accueille pour déguster nos pizzas dans un écrin végétal, à l'abri de la pluie et bercés par la lumière dorée d'Andlau.
             </p>
-            <p className="text-muted-foreground leading-relaxed">
-              Et quand le froid s'installe, notre <span className="text-foreground">vin blanc chaud bio</span> — élaboré avec un viticulteur d'Andlau, des fruits bio, du miel et du sucre de bouleau — vous attend (3,50€ le verre). 🍷
+            <p className="text-muted-foreground leading-relaxed text-justify">
+              Et quand le froid s'installe, notre <span className="text-foreground">vin blanc chaud bio</span>, élaboré avec un viticulteur d'Andlau, des fruits bio, du miel et du sucre de bouleau  vous attend (3,50€ le verre). 🍷
             </p>
           </div>
           <div className="order-1 md:order-2 relative">
