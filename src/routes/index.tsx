@@ -184,10 +184,10 @@ function Index() {
       <section id="terrasse" className="py-32">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
           <div className="order-2 md:order-1">
-            <p className="text-xs uppercase tracking-[0.3em] text-accent mb-4">La terrasse</p>
+            <p className="text-xs uppercase tracking-[0.3em] text-accent mb-4">LA TERRASSE</p>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Un cadre bucolique, été comme hiver.</h2>
             <p className="text-muted-foreground leading-relaxed mb-6 text-justify">
-              Couverte, douillette, baignée de guirlandes lumineuses : notre terrasse vous accueille pour déguster nos pizzas dans un écrin végétal, à l'abri de la pluie et bercés par la lumière dorée d'Andlau.
+              couverte
             </p>
             <p className="text-muted-foreground leading-relaxed text-justify">
               Et quand le froid s'installe, notre <span className="text-foreground">vin blanc chaud bio</span>, élaboré avec un viticulteur d'Andlau, des fruits bio, du miel et du sucre de bouleau  vous attend (3,50€ le verre). 🍷
