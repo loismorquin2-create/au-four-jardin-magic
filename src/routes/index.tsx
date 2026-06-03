@@ -65,7 +65,7 @@ function Index() {
               <br />
               <em className="italic text-primary">la pizza.</em>
             </h1>
-            <p className="text-lg text-muted-foreground max-w-md mb-8 leading-relaxed">
+            <p className="text-lg text-muted-foreground max-w-md mb-8 leading-relaxed text-justify">
               Pâte longue maturation, feu de bois, farine bio du Moulin Kircher et produits majoritairement locaux. Satisfaire vos papilles, c'est notre obsession. 🍅
             </p>
             <div className="flex flex-wrap gap-4">
@@ -120,10 +120,10 @@ function Index() {
           <div>
             <p className="text-xs uppercase tracking-[0.3em] text-accent mb-4">Notre histoire</p>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Le feu, la patience, le goût.</h2>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              Chez <span className="text-foreground">Au four & au jardin</span>, la pizza n'est pas qu'un plat — c'est une rencontre. Entre la chaleur du feu de bois, la lenteur d'une pâte qui repose près de 100 heures, et la fraîcheur des produits cueillis chez nos voisins alsaciens.
+            <p className="text-muted-foreground leading-relaxed mb-4 text-justify">
+              Chez <span className="text-foreground">Au four & au jardin</span>, la pizza n'est pas qu'un plat, c'est une rencontre. Entre la chaleur du feu de bois, la lenteur d'une pâte qui repose près de 100 heures, et la fraîcheur des produits cueillis chez nos voisins alsaciens.
             </p>
-            <p className="text-muted-foreground leading-relaxed mb-8">
+            <p className="text-muted-foreground leading-relaxed mb-8 text-justify">
               Sauce tomate 100% italienne, farine bio du Moulin Kircher, sel de Guérande. Rien d'autre. Juste l'essentiel, bien fait.
             </p>
             <div className="grid grid-cols-2 gap-6">
