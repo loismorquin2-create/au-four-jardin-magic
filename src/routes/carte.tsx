@@ -29,7 +29,7 @@ const sauceTomate: Pizza[] = [
   { name: "Gorgonzola", price: "12,50€", desc: "Mozzarella, gorgonzola (San Angelo), olives noires", isNew: true },
   { name: "Fromagère", price: "13,00€", desc: "Mozzarella, chèvre, gorgonzola", veg: true, extra: "Supplément Pecorino truffé + truffade : +2€" },
   { name: "Mexicaine", price: "13,00€", desc: "Mozzarella, chorizo, maïs, poivrons grillés marinés, huile piquante maison" },
-  { name: "Melanzana", price: "13,00€", desc: "Mozzarella, champignons, persillade*, aubergines, poivrons, oignons", veg: true },
+  { name: "Melanzana", price: "13,50€\n", desc: "Mozzarella, champignons, persillade, aubergines, poivrons oignons", veg: true },
   { name: "Paysanne", price: "13,50€", desc: "Mozzarella, chèvre, lardons salés à sec d'un artisan boucher local, oignons", extra: "Touche de champignons offerte sur demande" },
   { name: "Capri", price: "13,50€", desc: "Mozzarella, chèvre, miel d'Andlau bio", veg: true },
   { name: "Vivaldi Verde", price: "13,50€", desc: "Mozzarella, champignons, persillade*, artichaud marinés, olives noires", veg: true, isNew: true },

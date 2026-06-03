@@ -154,12 +154,12 @@ function Index() {
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { name: "La Parma", price: "15€", desc: "Jambon de Parme 24 mois, roquette, parmesan. À part pour préserver la fraîcheur." , tag: "Signature" },
-              { name: "La Burrata Verde", price: "14,50€", desc: "Base Margherita, burrata de bufflonne et roquette ajoutées après cuisson.", tag: "Retour" },
-              { name: "La Zucca+", price: "13€\n", desc: "Base potimarron, mozzarella, amandes torréfiées et jambon de Parme 24 mois.", tag: "Saison" },
-              { name: "La Vivaldi", price: "13€\n", desc: "L'incroyable 4 saisons, à l'artichaut mariné. Pour les amateurs de légumes.", tag: "Végétarienne" },
-              { name: "La Melanzana", price: "13€\n", desc: "Aubergine grillée marinée, la très redemandée. Une caresse méditerranéenne.", tag: "Végétarienne" },
-              { name: "L'Alsacienne", price: "13€", desc: "Tarte flambée au fromage bio du Lindenhof, lard salé à sec, oignon, cumin.", tag: "Du coin" },
+              { name: "La Parma", price: "15€", desc: "Mozzarella, jambon de parme 24 mois entier, avec roquette et copeaux de parmesan dans un contenant séparé" , tag: "Signature" },
+              { name: "La Gorgonzola", price: "12,50€", desc: "Mozzarella, gorgonzola (San Angelo), olives noires", tag: "Retour" },
+              { name: "Hohwaldoise", price: "13€\n", desc: "Fromage bio façon munster, oignons, lard", tag: "Saison" },
+              { name: "La Vivaldi verde", price: "13,50€\n", desc: "Mozzarella, champignons, persillade, artichaud marinés, olives noires", tag: "Végétarienne" },
+              { name: "La Melanzana", price: "13,50€\n", desc: "Mozzarella, champignons, persillade, aubergines, poivrons oignons", tag: "Végétarienne" },
+              { name: "L'Alsacienne", price: "11€", desc: "Esprit Tarte flambée : lardons salés à sec d'un artisan boucher local, oignons ", tag: "Du coin" },
             ].map((p, i) => (
               <article key={p.name} className="group p-6 bg-background/60 backdrop-blur border border-border/60 hover:border-primary/50 transition-all hover:-translate-y-1 duration-300" style={{ animation: `float-up 0.6s ease-out ${i * 0.05}s both` }}>
                 <div className="flex items-start justify-between mb-3">
