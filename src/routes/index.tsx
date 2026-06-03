@@ -164,7 +164,7 @@ function Index() {
               <article key={p.name} className="group p-6 bg-background/60 backdrop-blur border border-border/60 hover:border-primary/50 transition-all hover:-translate-y-1 duration-300" style={{ animation: `float-up 0.6s ease-out ${i * 0.05}s both` }}>
                 <div className="flex items-start justify-between mb-3">
                   <h3 className="font-display text-2xl">{p.name}</h3>
-                  <span className="text-primary font-display bg-slate-50 text-slate-50 text-xl">{p.price}</span>
+                  <span className="text-primary font-display text-inherit bg-inherit text-xl">{p.price}</span>
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4">{p.desc}</p>
                 <span className="inline-block text-[10px] uppercase tracking-[0.2em] text-accent border border-accent/30 px-2 py-1 rounded-full">{p.tag}</span>
