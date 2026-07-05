@@ -29,6 +29,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import { sendContactEmail } from "@/lib/api/contact.functions";
 
 const MOTIFS = [
   "Question générale",
