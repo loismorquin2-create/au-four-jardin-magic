@@ -6,6 +6,7 @@ import terrace from "@/assets/terrace-new.webp";
 import galCabane from "@/assets/gallery/terrasse-cabane.jpg.asset.json";
 import galSandwich from "@/assets/gallery/andlav-sandwich.jpg.asset.json";
 import { Phone, MapPin, Clock, Flame, Leaf, ShoppingBag } from "lucide-react";
+import { ContactForm } from "@/components/ContactForm";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -261,6 +262,15 @@ function Index() {
               <h3 className="font-display text-xl mb-2">Service</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">À emporter principalement.<br />Terrasse couverte selon saison.<br /><span className="text-foreground">Appelez pour les horaires du jour.</span></p>
             </div>
+          </div>
+
+          <div className="mt-16 max-w-3xl mx-auto">
+            <div className="text-center mb-8">
+              <p className="text-xs uppercase tracking-[0.3em] text-accent mb-4">Une question ?</p>
+              <h3 className="text-3xl md:text-4xl font-bold">Écrivez-nous</h3>
+              <p className="text-muted-foreground mt-3 text-sm">Nous vous répondons sous 24-48h.</p>
+            </div>
+            <ContactForm />
           </div>
         </div>
       </section>
