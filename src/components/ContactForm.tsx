@@ -29,6 +29,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import { sendContactEmail } from "@/lib/api/contact.functions";
 
 const MOTIFS = [
   "Question générale",
@@ -102,15 +103,26 @@ export function ContactForm() {
     }
     setSubmitting(true);
     try {
-      // Placeholder: log payload. Branchez ici votre backend / email.
-      await new Promise((r) => setTimeout(r, 600));
+      await sendContactEmail({
+        data: {
+          name: values.name,
+          phone: values.phone,
+          email: values.email || "",
+          motif: values.motif,
+          date: values.date
+            ? format(values.date, "PPP", { locale: fr })
+            : undefined,
+          message: values.message,
+        },
+      });
       setSent(true);
       form.reset();
       toast.success("Message envoyé", {
         description: "Merci, nous revenons vers vous sous 24-48h.",
       });
-    } catch {
-      toast.error("Une erreur est survenue. Réessayez.");
+    } catch (err) {
+      console.error(err);
+      toast.error("L'envoi a échoué. Merci de réessayer ou de nous appeler.");
     } finally {
       setSubmitting(false);
     }
