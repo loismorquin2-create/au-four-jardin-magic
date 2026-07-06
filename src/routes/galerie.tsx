@@ -187,7 +187,11 @@ function Galerie() {
             <span className="text-secondary">au jardin</span>
             <span className="ml-3 opacity-60">— Pizzeria artisanale, Andlau</span>
           </div>
-          <Link to="/" className="hover:text-foreground transition">← Retour à l'accueil</Link>
+          <nav className="flex flex-wrap items-center gap-x-5 gap-y-2">
+            <Link to="/mentions-legales" className="hover:text-foreground transition">Mentions légales</Link>
+            <Link to="/confidentialite" className="hover:text-foreground transition">Politique de confidentialité</Link>
+            <Link to="/" className="hover:text-foreground transition">← Accueil</Link>
+          </nav>
         </div>
       </footer>
 

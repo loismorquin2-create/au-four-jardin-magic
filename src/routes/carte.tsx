@@ -137,6 +137,18 @@ function CartePage() {
         </div>
       </section>
 
+      {/* ALLERGÈNES */}
+      <section className="max-w-4xl mx-auto px-6 pb-20">
+        <div className="border border-primary/40 bg-primary/5 p-6 text-sm text-center">
+          <p className="uppercase tracking-[0.2em] text-xs text-primary mb-2 font-medium">Allergènes</p>
+          <p className="text-muted-foreground leading-relaxed">
+            Nos plats peuvent contenir des allergènes (gluten, lait, œufs, fruits à coque, poisson, moutarde, sulfites…).
+            <br />
+            <span className="text-foreground">Informations détaillées sur les allergènes disponibles sur demande auprès du personnel.</span>
+          </p>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="bg-card/40 border-t border-border/40 py-16">
         <div className="max-w-3xl mx-auto px-6 text-center">
@@ -155,6 +167,23 @@ function CartePage() {
           </p>
         </div>
       </section>
+
+      {/* FOOTER */}
+      <footer className="py-12 border-t border-border/40">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
+          <div className="font-display">
+            <span className="text-primary">Au four</span>
+            <span> & </span>
+            <span className="text-secondary">au jardin</span>
+            <span className="ml-3 opacity-60">— Pizzeria artisanale, Andlau</span>
+          </div>
+          <nav className="flex flex-wrap items-center gap-x-5 gap-y-2">
+            <Link to="/mentions-legales" className="hover:text-foreground transition">Mentions légales</Link>
+            <Link to="/confidentialite" className="hover:text-foreground transition">Politique de confidentialité</Link>
+            <Link to="/" className="hover:text-foreground transition">← Accueil</Link>
+          </nav>
+        </div>
+      </footer>
     </div>
   );
 }

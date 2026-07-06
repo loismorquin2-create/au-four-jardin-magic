@@ -90,12 +90,55 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/5fbfe888-110c-4755-a778-8912675218d0/id-preview-df04756d--d340e9d3-1d63-49c2-8787-b6fe4f4d9a11.lovable.app-1780503299319.png" },
     ],
     links: [
+      { rel: "icon", type: "image/png", href: "/favicon.png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Inter:wght@300;400;500;600&display=swap" },
       {
         rel: "stylesheet",
         href: appCss,
+      },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Restaurant",
+          name: "Au four & au jardin",
+          description: "Pizzeria artisanale au feu de bois à Andlau. Produits locaux, pâte longue maturation, terrasse bucolique.",
+          image: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/5fbfe888-110c-4755-a778-8912675218d0/id-preview-df04756d--d340e9d3-1d63-49c2-8787-b6fe4f4d9a11.lovable.app-1780503299319.png",
+          servesCuisine: ["Pizza", "Italienne", "Alsacienne"],
+          priceRange: "€€",
+          telephone: "+33667485852",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "5b rue de la Commanderie",
+            postalCode: "67140",
+            addressLocality: "Andlau",
+            addressCountry: "FR",
+          },
+          openingHoursSpecification: [
+            {
+              "@type": "OpeningHoursSpecification",
+              dayOfWeek: ["Friday", "Saturday", "Sunday"],
+              opens: "18:00",
+              closes: "21:15",
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              dayOfWeek: "Monday",
+              opens: "12:00",
+              closes: "14:00",
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              dayOfWeek: "Monday",
+              opens: "18:00",
+              closes: "21:15",
+            },
+          ],
+        }),
       },
     ],
   }),
@@ -107,7 +150,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="fr">
       <head>
         <HeadContent />
       </head>

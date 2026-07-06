@@ -295,8 +295,12 @@ function Index() {
             <span className="text-primary">Au four</span>
             <span> & </span>
             <span className="text-secondary">au jardin</span>
-            <span className="ml-3 opacity-60">13€\n Pizzeria artisanale, Andlau</span>
+            <span className="ml-3 opacity-60">— Pizzeria artisanale, Andlau</span>
           </div>
+          <nav className="flex flex-wrap items-center gap-x-5 gap-y-2">
+            <Link to="/mentions-legales" className="hover:text-foreground transition">Mentions légales</Link>
+            <Link to="/confidentialite" className="hover:text-foreground transition">Politique de confidentialité</Link>
+          </nav>
           <div className="opacity-70">© {new Date().getFullYear()} · Fait avec 🔥 & 🍅</div>
         </div>
       </footer>
