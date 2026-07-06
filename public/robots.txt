@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://au-four-jardin-magic.lovable.app/sitemap.xml

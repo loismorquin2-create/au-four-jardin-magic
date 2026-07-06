@@ -86,7 +86,7 @@ function CartePage() {
             <Link to="/galerie" className="hover:text-foreground transition">Galerie</Link>
           </nav>
           <a
-            href="tel:0667485852"
+            href="tel:+33667485852"
             className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-4 py-2 text-sm font-medium hover:bg-primary-glow transition"
           >
             <Phone className="w-4 h-4" /> Commander
@@ -144,7 +144,7 @@ function CartePage() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Réservez à partir de 14h</h2>
           <p className="text-muted-foreground mb-8">N'hésitez pas à demander la suggestion du moment.</p>
           <a
-            href="tel:0667485852"
+            href="tel:+33667485852"
             className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-6 py-3 font-medium hover:bg-primary-glow transition"
           >
             <Phone className="w-4 h-4" /> 06.67.48.58.52

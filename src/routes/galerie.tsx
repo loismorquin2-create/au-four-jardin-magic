@@ -93,7 +93,7 @@ function Galerie() {
             <span className="text-secondary">au jardin</span>
           </Link>
           <a
-            href="tel:0667485852"
+            href="tel:+33667485852"
             className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-4 py-2 text-sm font-medium hover:bg-primary-glow transition"
           >
             <Phone className="w-4 h-4" /> Commander
