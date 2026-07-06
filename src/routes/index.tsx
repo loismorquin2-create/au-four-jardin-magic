@@ -264,6 +264,19 @@ function Index() {
             </div>
           </div>
 
+          <div className="mt-12 overflow-hidden rounded-lg border border-border/60 shadow-[var(--shadow-warm)]">
+            <iframe
+              title="Carte — 5b rue de la Commanderie, Andlau"
+              src="https://www.google.com/maps?q=5b+rue+de+la+Commanderie+67140+Andlau&output=embed"
+              width="100%"
+              height="380"
+              style={{ border: 0, display: "block" }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+          </div>
+
           <div className="mt-16 max-w-3xl mx-auto">
             <div className="text-center mb-8">
               <p className="text-xs uppercase tracking-[0.3em] text-accent mb-4">Une question ?</p>
