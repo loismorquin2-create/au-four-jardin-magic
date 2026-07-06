@@ -39,7 +39,7 @@ function Index() {
             <a href="#contact" className="hover:text-foreground transition">Contact</a>
           </nav>
           <a
-            href="tel:0667485852"
+            href="tel:+33667485852"
             className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-4 py-2 text-sm font-medium hover:bg-primary-glow transition"
           >
             <Phone className="w-4 h-4" /> Commander
@@ -70,7 +70,7 @@ function Index() {
               Pâte longue maturation, feu de bois, farine bio du Moulin Kircher et produits majoritairement locaux. Satisfaire vos papilles, c'est notre obsession. 🍅
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href="tel:0667485852" className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-6 py-3 font-medium shadow-[var(--shadow-warm)] hover:bg-primary-glow transition">
+              <a href="tel:+33667485852" className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-6 py-3 font-medium shadow-[var(--shadow-warm)] hover:bg-primary-glow transition">
                 <Phone className="w-4 h-4" /> 06 67 48 58 52
               </a>
               <Link to="/carte" className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 font-medium hover:bg-card transition">
@@ -255,7 +255,7 @@ function Index() {
               <Phone className="w-6 h-6 text-primary mb-4" />
               <h3 className="font-display text-xl mb-2">Commande</h3>
               <p className="text-muted-foreground text-sm leading-relaxed mb-4">Appelez pour réserver vos pizzas à emporter.</p>
-              <a href="tel:0667485852" className="text-primary font-display text-2xl hover:text-primary-glow">06 67 48 58 52</a>
+              <a href="tel:+33667485852" className="text-primary font-display text-2xl hover:text-primary-glow">06 67 48 58 52</a>
             </div>
             <div className="p-8 bg-background border border-border/60">
               <Clock className="w-6 h-6 text-primary mb-4" />
