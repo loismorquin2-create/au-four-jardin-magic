@@ -249,7 +249,7 @@ function Index() {
               <MapPin className="w-6 h-6 text-primary mb-4" />
               <h3 className="font-display text-xl mb-2">Adresse</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">5b rue de la Commanderie<br />67140 Andlau, France</p>
-              <a href="https://maps.google.com/?q=5b+rue+de+la+Commanderie+Andlau" target="_blank" rel="noopener" className="text-primary text-sm mt-4 inline-block hover:underline">Voir sur la carte →</a>
+              
             </div>
             <div className="p-8 bg-background border border-border/60">
               <Phone className="w-6 h-6 text-primary mb-4" />
